@@ -130,7 +130,7 @@
 					  	 echo "Upload failed"; 
 						}
 					} else {
-   						echo "Please insert image with 500*500 dimension";
+   						echo "Please insert image with 200 x 101 dimension";
 						}
 
 					

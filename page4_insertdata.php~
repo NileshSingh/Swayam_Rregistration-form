@@ -119,7 +119,13 @@
 					$width8=320;
 					
 					$uploadfile3 = $uploadpath . basename($_FILES['userfile3']['name']);
-					
+					$filetmpname3=$_FILES["userfile3"]["tmp_name"];
+					$dimension3=getimagesize($filetmpname3);
+					echo "width3: ".$dimension2[0]."<br />";
+					echo "Height3: ".$dimension2[1]."<br />";
+					//$hight8=211;
+
+					//$width8=320;
 					
 					if($h==$dimension[1] && $w==$dimension[0])
 					{
@@ -130,7 +136,7 @@
 					  	 echo "Upload failed"; 
 						}
 					} else {
-   						echo "Please insert image with 500*500 dimension";
+   						echo "Please insert image with 200 x 101 dimension";
 						}
 
 					
@@ -200,7 +206,17 @@
    						echo "Please insert image with 262 x 136 dimension";
 						}
 
-										
+					if($hight8==$dimension8[1] && $width8==$dimension8[0])
+					{
+					if (move_uploaded_file($_FILES['userfile8']['tmp_name'], $uploadfile8)) {
+					  echo "Data inserted successfully8\n";
+					} else {
+					   echo "Upload failed8";
+					}
+					} else {
+   						echo "Please insert image with 320 x 211 dimension";
+						}
+					
 					if (move_uploaded_file($_FILES['userfile3']['tmp_name'], $uploadfile3)) {
 					  echo "Data inserted successfully\n";
 						//header("location: page1.php");
