@@ -123,11 +123,16 @@
 					
 					if($h==$dimension[1] && $w==$dimension[0])
 					{
+					   if($_FILES['userfile']['type'] == 'image/jpeg')
+					    {
 						if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 					  	echo "Data inserted successfully\n";
 						
 						} else {
 					  	 echo "Upload failed"; 
+						}
+					   } else {
+					  	 echo "please upload JPEG file"; 
 						}
 					} else {
    						echo "Please insert image with 200 x 101 dimension";
@@ -136,16 +141,24 @@
 					
 					if($hight==$dimension1[1] && $width==$dimension1[0])
 					{
-					if (move_uploaded_file($_FILES['userfile1']['tmp_name'], $uploadfile1)) {
-					  echo "Data inserted successfully\n";
+					   if($_FILES['userfile1']['type'] == 'image/jpeg')
+					    {
+						if (move_uploaded_file($_FILES['userfile1']['tmp_name'], $uploadfile1)) {
+					 	 echo "Data inserted successfully\n";
 					} else {
 					   echo "Upload failed";
-					}
+					} 
+					} else {
+					  	 echo "please upload JPEG file"; 
+						}
 					} else {
    						echo "Please insert image with 960*195 dimension";
 						}
 
 					if($hight2==$dimension2[1] && $width2==$dimension2[0])
+					{
+
+					if($_FILES['userfile2']['type'] == 'image/jpeg')
 					{
 					if (move_uploaded_file($_FILES['userfile2']['tmp_name'], $uploadfile2)) {
 					  echo "Data inserted successfully\n";
@@ -153,10 +166,15 @@
 					   echo "Upload failed";
 					}
 					} else {
+					  	 echo "please upload JPEG file"; 
+						}
+					} else {
    						echo "Please insert image with 110*110 dimension";
 						}
 
 					if($hight4==$dimension4[1] && $width4==$dimension4[0])
+					{
+					if($_FILES['userfile4']['type'] == 'image/png')
 					{
 					if (move_uploaded_file($_FILES['userfile4']['tmp_name'], $uploadfile4)) {
 					  echo "Data inserted successfully4\n";
@@ -164,10 +182,15 @@
 					   echo "Upload failed4";
 					}
 					} else {
+					  	 echo "please upload PNG file"; 
+						}
+					} else {
    						echo "Please insert image with 185 x 48 dimension";
 						}
 
 					if($hight5==$dimension5[1] && $width5==$dimension5[0])
+					{
+					if($_FILES['userfile5']['type'] == 'image/jpeg')
 					{
 					if (move_uploaded_file($_FILES['userfile5']['tmp_name'], $uploadfile5)) {
 					  echo "Data inserted successfully5\n";
@@ -175,38 +198,56 @@
 					   echo "Upload failed5";
 					}
 					} else {
+					  	 echo "please upload JPEG file"; 
+						}
+					} else {
    						echo "Please insert image with 175 x 37 dimension";
 						}
 
-					if($hight6==$dimension6[1] && $width2==$dimension6[0])
+					if($hight6==$dimension6[1] && $width6==$dimension6[0])
 					{
-					if (move_uploaded_file($_FILES['userfile6']['tmp_name'], $uploadfile6)) {
-					  echo "Data inserted successfully6\n";
-					} else {
-					   echo "Upload failed6";
-					}
+						if($_FILES['userfile6']['type'] == 'image/jpeg')
+						{
+							if (move_uploaded_file($_FILES['userfile6']['tmp_name'], $uploadfile6)) {
+					  			echo "Data inserted successfully6\n";
+							} else {
+					   			echo "Upload failed6";
+							}
+						} else {
+					  	 	echo "please upload JPEG file"; 
+							}
 					} else {
    						echo "Please insert image with 378 x 200 dimension";
 						}
 
 					if($hight7==$dimension7[1] && $width7==$dimension7[0])
 					{
+					if($_FILES['userfile7']['type'] == 'image/jpeg')
+					{
 					if (move_uploaded_file($_FILES['userfile7']['tmp_name'], $uploadfile7)) {
 					  echo "Data inserted successfully7\n";
 					} else {
 					   echo "Upload failed7";
 					}
+					}else {
+					  	 echo "please upload JPEG file"; 
+						}
 					} else {
    						echo "Please insert image with 262 x 136 dimension";
 						}
 
 					if($hight8==$dimension8[1] && $width8==$dimension8[0])
 					{
+					if($_FILES['userfile8']['type'] == 'image/jpeg')
+					{
 					if (move_uploaded_file($_FILES['userfile8']['tmp_name'], $uploadfile8)) {
 					  echo "Data inserted successfully8\n";
 					} else {
 					   echo "Upload failed8";
 					}
+					}else {
+					  	 echo "please upload JPEG file"; 
+						}
 					} else {
    						echo "Please insert image with 320 x 211 dimension";
 						}
