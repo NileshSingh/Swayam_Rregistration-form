@@ -1,0 +1,200 @@
+<?php
+session_start();
+//checking second page values for empty,If it finds any blank field then redirected to second page
+if (isset($_POST['course_id'])){
+    if (empty($_POST['course_id'])
+	|| empty($_POST['course_uni'])
+	|| empty($_POST['course_title'])
+	|| empty($_POST['birthday'])
+	|| empty($_POST['birthday1'])
+	|| empty($_POST['co_des'])
+	
+	|| empty($_POST['PE'])
+	|| empty($_POST['BCD'])){
+		
+		//setting error message
+        $_SESSION['error_page2'] = "Mandatory field(s) are missing, Please fill it again";
+        header("location: page2_form.php");//redirecting to second page
+    
+	} else {
+		//fetching all values posted from second page and storing it in variable
+        foreach ($_POST as $key => $value) {
+            $_SESSION['post'][$key] = $value;
+        }
+    }
+} else {
+    if (empty($_SESSION['error_page3'])) {
+        header("location: page1_form.php");//redirecting to first page
+    }
+}
+?>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Full Course Description</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,800,700italic,700,600italic,600,400italic,300italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+<link rel="stylesheet" href="CSS/university_des.css" type="text/css" media="all">
+<link href="CSS/bootstrap.css" rel="stylesheet">
+<link href="CSS/bootstrap-responsive.css" rel="stylesheet">
+
+<script type="text/javascript">
+
+function alphabet(){
+if (!form.name1.value.match(/^[a-zA-Z]+$/) && form.name1.value !="")
+{
+form.name1.value="";
+form.name1.focus();
+alert("please enter character/alphabets");
+}
+}
+
+function alphabet1(){
+if (!form.name2.value.match(/^[a-zA-Z]+$/) && form.name2.value !="")
+{
+form.name2.value="";
+form.name2.focus();
+alert("please enter character/alphabets");
+}
+}
+
+function IsValidEmail(email) {
+            var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            return expr.test(email);
+        };
+        function ValidateEmail() {
+            var email = document.getElementById("txtEmail").value;
+            if (!IsValidEmail(email)) {
+                alert("Invalid email address.");
+            }
+            else {
+                alert("Valid email address.");
+            }
+        }
+
+</script>
+<script>
+$(document).ready(function() {
+    var text_max = 120;
+    $('#textarea_feedback').html(text_max + ' characters remaining');
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea_feedback').html(text_remaining + ' characters remaining');
+    });
+});
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="wrapper-container">
+    <!-- banner ----->
+        <div class="banner-image">
+        	<img src="images/university/Visva-Bharati_universiti_MainBanner_960x195.jpg"></img>
+        </div>
+    <!-----banner closed------->
+        
+        <div class="container">
+<form enctype="multipart/form-data" class="form-horizontal" id="registration" name="form" method='post' action="page4_insertdata.php" >
+<fieldset>
+<legend>Full Course Description</legend>
+<div class="control-group">
+<label class="control-label">Course Faculty Name/s :</label>
+<div class="controls">
+<input type="text" id="name" name="course_fa" onkeyup="alphabet()" placeholder="Course Faculty Name/s " required>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Course Faculty Title/s :</label>
+<div class="controls">
+
+<input type="text" id="name" name="course_title1" onkeyup="alphabet1()" placeholder="Enter Course Faculty Title/s " required>
+    
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Course Faculty Biography text:</label>
+<div class="controls">
+<textarea id="textarea" class="form-control" name="CFB" rows="3" placeholder="Enetr Course Faculty Biography" required maxlength="120" >
+</textarea>
+
+
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">FAQ text (if any):</label>
+<div class="controls">
+	
+    <textarea class="form-control" rows="3" name="faq" placeholder="Enter Q1, Q2,Q3..." required></textarea>
+
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Email address for course :</label>
+<div class="controls">
+<input type="email" id="co_name" name="co_name" onclick = "ValidateEmail()" placeholder="Enter Email address for course" required>
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Brief Course Description:</label>
+<div class="controls">
+<textarea class="form-control" rows="3" name="BCD1" placeholder="Enetr Brief Course Description" required></textarea>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">University Seal/Logo/Brand:</label>
+<div class="controls">
+	<p class="help-block">Upload your Seal/Logo/Brand image</p>
+    <input type="file" name="userfile" id="exampleInputFile" >
+	
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">University Header Graphics:</label>
+<div class="controls">
+	<b>Select Header image file (960 width x 195 height pixels)</b><br />
+    <input type="file" name="userfile1" id="exampleInputFile" >
+
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">Course Faculty Photo/s:</label>
+<div class="controls">
+	
+    <input type="file" name="userfile2" id="exampleInputFile" placeholder="" ><br />
+	<b>minimum 110 x 110 pixels, high-res preferred</b>
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Introductory Video:</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile3" placeholder="">
+	<b>Upload introductory Video</b><br />
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label"></label>
+<div class="controls">
+<button type="reset" value="Send File" class="btn btn-success" >Reset</button>
+<button type="submit" value="Send File" class="btn btn-success" >Submit</button>
+
+</div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+</body>
+</html>
