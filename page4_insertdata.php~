@@ -52,9 +52,9 @@
 					$dimension=getimagesize($filetmpname);
 					//echo "width: ".$dimension[0]."<br />";
 					//echo "Height: ".$dimension[1]."<br />";
-					$h=500;
+					$h=101;
 
-					$w=500;
+					$w=200;
 					 
 					$uploadfile1 = $uploadpath . basename($_FILES['userfile1']['name']);
 					$filetmpname1=$_FILES["userfile1"]["tmp_name"];
@@ -72,6 +72,51 @@
 					$hight2=110;
 
 					$width2=110;
+
+					$uploadfile4= $uploadpath . basename($_FILES['userfile4']['name']);
+					$filetmpname4=$_FILES["userfile4"]["tmp_name"];
+					$dimension4=getimagesize($filetmpname4);
+					//echo "width2: ".$dimension2[0]."<br />";
+					//echo "Height2: ".$dimension2[1]."<br />";
+					$hight4=48;
+
+					$width4=185;
+
+					$uploadfile5= $uploadpath . basename($_FILES['userfile5']['name']);
+					$filetmpname5=$_FILES["userfile5"]["tmp_name"];
+					$dimension5=getimagesize($filetmpname5);
+					//echo "width2: ".$dimension2[0]."<br />";
+					//echo "Height2: ".$dimension2[1]."<br />";
+					$hight5=37;
+
+					$width5=175;
+
+					$uploadfile6= $uploadpath . basename($_FILES['userfile6']['name']);
+					$filetmpname6=$_FILES["userfile6"]["tmp_name"];
+					$dimension6=getimagesize($filetmpname6);
+					//echo "width2: ".$dimension2[0]."<br />";
+					//echo "Height2: ".$dimension2[1]."<br />";
+					$hight6=200;
+
+					$width6=378;
+
+					$uploadfile7= $uploadpath . basename($_FILES['userfile7']['name']);
+					$filetmpname7=$_FILES["userfile7"]["tmp_name"];
+					$dimension7=getimagesize($filetmpname7);
+					//echo "width2: ".$dimension2[0]."<br />";
+					//echo "Height2: ".$dimension2[1]."<br />";
+					$hight7=136;
+
+					$width7=262;
+
+					$uploadfile8= $uploadpath . basename($_FILES['userfile8']['name']);
+					$filetmpname8=$_FILES["userfile8"]["tmp_name"];
+					$dimension8=getimagesize($filetmpname8);
+					//echo "width2: ".$dimension2[0]."<br />";
+					//echo "Height2: ".$dimension2[1]."<br />";
+					$hight8=136;
+
+					$width8=262;
 					
 					$uploadfile3 = $uploadpath . basename($_FILES['userfile3']['name']);
 					
