@@ -154,26 +154,68 @@ $(document).ready(function() {
 <div class="controls">
 	<p class="help-block">Upload your Seal/Logo/Brand image</p>
     <input type="file" name="userfile" id="exampleInputFile" >
-	
+	<b>minimum 200 x 101 pixels, only .jpeg image allowed</b><br />
 </div>
 </div>
 
 <div class="control-group">
 <label class="control-label">University Header Graphics:</label>
 <div class="controls">
-	<b>Select Header image file (960 width x 195 height pixels)</b><br />
+	
     <input type="file" name="userfile1" id="exampleInputFile" >
-
+	<b>minimum 960 x 195 pixels, only .jpeg image allowed</b><br />
 </div>
 </div>
 <div class="control-group">
 <label class="control-label">Course Faculty Photo/s:</label>
 <div class="controls">
 	
-    <input type="file" name="userfile2" id="exampleInputFile" placeholder="" ><br />
-	<b>minimum 110 x 110 pixels, high-res preferred</b>
+    <input type="file" name="userfile2" id="exampleInputFile" placeholder="" >
+	<b>minimum 110 x 110 pixels, only .jpeg image allowed</b></br>
 </div>
 </div>
+
+<div class="control-group">
+<label class="control-label">Home page carousel unit image</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile4" placeholder="">
+	<b>minimum 185 x 48 pixels, only .png image allowed</b><br />
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">private page logo image</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile5" placeholder="">
+	<b>minimum 175 x 37 pixels, only .jpeg image allowed</b><br />
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Home page carousel image</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile6" placeholder="">
+	<b>minimum 378 x 200 pixels, only .jpeg image allowed</b><br />
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Course Listing image</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile7" placeholder="">
+	<b>minimum 262 x 136 pixels, only .jpeg image allowed</b><br />
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label">Course Desicription video image</label>
+<div class="controls">
+<input type="file" id="exampleInputFile" name="userfile8" placeholder="">
+	<b>minimum 320 x 211 pixels, only .jpeg image allowed</b><br />
+</div>
+</div>
+
+
 
 <div class="control-group">
 <label class="control-label">Introductory Video:</label>
@@ -182,6 +224,8 @@ $(document).ready(function() {
 	<b>Upload introductory Video</b><br />
 </div>
 </div>
+
+
 
 <div class="control-group">
 <label class="control-label"></label>

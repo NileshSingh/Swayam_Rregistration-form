@@ -52,9 +52,9 @@
 					$dimension=getimagesize($filetmpname);
 					//echo "width: ".$dimension[0]."<br />";
 					//echo "Height: ".$dimension[1]."<br />";
-					$h=500;
+					$h=101;
 
-					$w=500;
+					$w=200;
 					 
 					$uploadfile1 = $uploadpath . basename($_FILES['userfile1']['name']);
 					$filetmpname1=$_FILES["userfile1"]["tmp_name"];

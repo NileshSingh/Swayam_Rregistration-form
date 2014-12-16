@@ -116,7 +116,7 @@
 						//header("location: page1.php");
 					} else {
 					   echo "Upload failed";
-						header("location: page3.php");
+						//header("location: page3.php");
 					}
                             } else {
                                 echo '<p><span>Form Submission Failed..!!</span></p>';
