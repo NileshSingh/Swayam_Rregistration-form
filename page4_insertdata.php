@@ -252,6 +252,9 @@
    						echo "Please insert image with 320 x 211 dimension";
 						}
 					
+					// start uploading course video
+					if(($_FILES['userfile3']['type'] == 'video/mp4') || ($_FILES['userfile3']['type'] == 'video/avi'))
+					{
 					if (move_uploaded_file($_FILES['userfile3']['tmp_name'], $uploadfile3)) {
 					  echo "Data inserted successfully\n";
 						//header("location: page1.php");
@@ -259,6 +262,9 @@
 					   echo "Upload failed";
 						//header("location: page3.php");
 					}
+					}else {
+					  	 echo "please upload MP4/AVI file"; 
+						}
                             } else {
                                 echo '<p><span>Form Submission Failed..!!</span></p>';
                             }
