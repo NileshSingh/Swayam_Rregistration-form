@@ -100,7 +100,7 @@ $(document).ready(function() {
     <!-----banner closed------->
         
         <div class="container">
-<form enctype="multipart/form-data" class="form-horizontal" id="registration" name="form" method='post' action="page4_insertdata.php" >
+<form enctype="multipart/form-data" class="form-horizontal" id="registration" name="form" method='post' action="save_xls.php" >
 <fieldset>
 <legend>Full Course Description</legend>
 <div class="control-group">
@@ -154,7 +154,7 @@ $(document).ready(function() {
 <div class="controls">
 	<p class="help-block">Upload your Seal/Logo/Brand image</p>
     <input type="file" name="userfile" id="exampleInputFile" >
-	
+	<b>minimum 200 x 101 pixels, only .jpeg image allowed</b><br />
 </div>
 </div>
 

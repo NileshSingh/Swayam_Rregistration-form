@@ -59,17 +59,15 @@ $varname19 = $_POST['faq'];
 $varname20 = $_POST['co_name'];
 $varname21 = $_POST['BCD1'];
 
-
+echo "$name1"
+echo "$intro"
 
 
 
 	if(empty($errorMessage)) 
 	{
 		$fs = fopen("mydata.csv","a");
-		fwrite($fs,$varMovie . ", " . $varName . ", " . $varname2 . ", " . $varname3 . ", " . $varname4 . 
-", " . $varname5 . ", " . $varname6 . ", " . $varName7 . ", " . $varname8 . ", " . $varname9 . ", " . $varname10 . 
-", " . $varname11 . ", " . $varName12 . ", " . $varname13 . ", " . $varname14 . ", " . $varname15 . ", " . $varname16 . 
-", " . $varName17 . ", " . $varname18 . ", " . $varname19 . ", " . $varname20 . ", " . $varname21 . "\n");
+		fwrite($fs,$name1 . ", " . $intro ."\n");
 		fclose($fs);
 		
 		//header("Location: thankyou.html");
@@ -93,7 +91,7 @@ if (move_uploaded_file($_FILES['userfile1']['tmp_name'], $uploadfile1)) {
   echo "...\n";
 } else {
    echo "Upload failed";*/
-}
+//}
 header("Location: page1.php");
 
 ?> 

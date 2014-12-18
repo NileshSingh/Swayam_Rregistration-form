@@ -38,7 +38,18 @@
                             $query = mysql_query("insert into table1 (name1,intro,name2,name3,name4,txtPhone,txtMobile,course_id,course_uni,course_title,birthday,birthday1,co_des,PE,BCD,course_fa,course_title1,CFB
 ,faq,co_name,BCD1) values('$name1','$intro','$name2','$name3','$name4','$txtPhone','$txtMobile','$course_id','$course_uni','$course_title',
 '$birthday','$birthday1','$co_des','$PE','$BCD','$course_fa','$course_title1','$CFB','$faq','$co_name','$BCD1')", $connection);
-                            if ($query) {
+                           
+	if(empty($errorMessage)) 
+	{
+		$fs = fopen("mydata.csv","a");
+		fwrite($fs,$name1 . ", " . $intro . ", " . $name2 . ", " . $name3 . ", " . $name4 . ", " . $txtPhone . ", " . $txtMobile . ", " . $course_id . ", " . $course_uni . ", " . $course_title . ", " . $birthday . ", " . $birthday1 . ", " . $co_des . ", " . $PE . ", " . $BCD . ", " . $course_fa . ", " . $course_title1 . ", " . $CFB . ", " . $faq . ", " . $co_name . ", " . $BCD1 . "\n");
+		fclose($fs);
+		
+		//header("Location: thankyou.html");
+		//exit;
+	}
+
+				       if ($query) {
                                 
 										
 					

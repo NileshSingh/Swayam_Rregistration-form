@@ -115,7 +115,7 @@ function Validate()
 <div class="control-group">
 <label class="control-label">University Name/Title :</label>
 <div class="controls">
-<input type="text" id="name" name="name1" onkeyup="alphabet()" placeholder="Enter Institute Name" required >
+<input type="text" id="name" name="name1"  placeholder="Enter Institute Name" required >
 </div>
 </div>
 <div class="control-group">
@@ -131,7 +131,7 @@ function Validate()
 <div class="control-group">
 <label class="control-label">Coordinator Name:</label>
 <div class="controls">
-<input type="text" id="name2" name="name2" onkeyup="alphabet1()" placeholder="Enter Name" required >
+<input type="text" id="name2" name="name2"  placeholder="Enter Name" required >
 </div>
 </div>
 <div class="control-group">

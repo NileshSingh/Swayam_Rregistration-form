@@ -111,11 +111,11 @@ function Validate()
                 </span>
 <form class="form-horizontal" name="form" enctype="multipart/form-data" id="registration" method='post' action="page2.php" autocomplete="on">
 <fieldset>
-<legend>University / Institute Registration Form</legend>
+<legend>Swayam Partner University / Institute Registration Form</legend>
 <div class="control-group">
 <label class="control-label">University Name/Title :</label>
 <div class="controls">
-<input type="text" id="name" name="name1" onkeyup="alphabet()" placeholder="Enter Institute Name" required >
+<input type="text" id="name" name="name1"  placeholder="Enter Institute Name" required >
 </div>
 </div>
 <div class="control-group">
