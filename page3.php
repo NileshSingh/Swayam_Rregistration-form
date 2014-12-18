@@ -14,7 +14,7 @@ if (isset($_POST['course_id'])){
 		
 		//setting error message
         $_SESSION['error_page2'] = "Mandatory field(s) are missing, Please fill it again";
-        header("location: page2_form.php");//redirecting to second page
+        header("location: page2.php");//redirecting to second page
     
 	} else {
 		//fetching all values posted from second page and storing it in variable
@@ -24,7 +24,7 @@ if (isset($_POST['course_id'])){
     }
 } else {
     if (empty($_SESSION['error_page3'])) {
-        header("location: page1_form.php");//redirecting to first page
+        header("location: page1.php");//redirecting to first page
     }
 }
 ?>

@@ -33,11 +33,11 @@
                             extract($_SESSION['post']);  
 							
 							//Storing values in database
-                            $connection = mysql_connect("localhost", "root", "root");
+                           /* $connection = mysql_connect("localhost", "root", "root");
                             $db = mysql_select_db("detail", $connection);
                             $query = mysql_query("insert into table1 (name1,intro,name2,name3,name4,txtPhone,txtMobile,course_id,course_uni,course_title,birthday,birthday1,co_des,PE,BCD,course_fa,course_title1,CFB
 ,faq,co_name,BCD1) values('$name1','$intro','$name2','$name3','$name4','$txtPhone','$txtMobile','$course_id','$course_uni','$course_title',
-'$birthday','$birthday1','$co_des','$PE','$BCD','$course_fa','$course_title1','$CFB','$faq','$co_name','$BCD1')", $connection);
+'$birthday','$birthday1','$co_des','$PE','$BCD','$course_fa','$course_title1','$CFB','$faq','$co_name','$BCD1')", $connection);*/
                            
 	if(empty($errorMessage)) 
 	{

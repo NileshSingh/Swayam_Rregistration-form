@@ -100,7 +100,7 @@ $(document).ready(function() {
     <!-----banner closed------->
         
         <div class="container">
-<form enctype="multipart/form-data" class="form-horizontal" id="registration" name="form" method='post' action="save_xls.php" >
+<form enctype="multipart/form-data" class="form-horizontal" id="registration" name="form" method='post' action="page4_insertdata.php" >
 <fieldset>
 <legend>Full Course Description</legend>
 <div class="control-group">
